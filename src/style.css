@@ -217,6 +217,26 @@ p {
   margin-bottom: 1.5rem;
 }
 
+.flashy-heading {
+  font-size: 3.5rem !important;
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #00d2ff 0%, #0077b5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+@media (max-width: 768px) {
+  .flashy-heading {
+    font-size: 2.5rem !important;
+  }
+}
+
 .hero-content p {
   color: #E5E7EB;
   font-size: 1.15rem;
