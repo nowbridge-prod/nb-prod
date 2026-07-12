@@ -78,9 +78,10 @@ if (quoteForm && formSuccess) {
     
     const formData = new FormData(quoteForm);
     
-    // Check if the user forgot to change the placeholder access key
-    if (formData.get('access_key') === 'YOUR_WEB3FORMS_ACCESS_KEY_HERE') {
-      alert("Please update the Web3Forms Access Key in index.html to actually send emails.");
+    // Check if the user forgot to change the placeholder access key or env var is missing
+    const accessKey = formData.get('access_key');
+    if (accessKey === '%VITE_WEB3FORMS_ACCESS_KEY%' || accessKey === 'YOUR_WEB3FORMS_ACCESS_KEY_HERE' || !accessKey) {
+      alert("Please update the Web3Forms Access Key in .env.local to actually send emails.");
       submitBtn.disabled = false;
       submitBtn.textContent = 'Submit Request';
       return;

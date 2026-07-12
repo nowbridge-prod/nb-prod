@@ -11,6 +11,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/src/style.css" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=%VITE_GA_MEASUREMENT_ID%"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', '%VITE_GA_MEASUREMENT_ID%');
+    </script>
 </head>
 
 <body>
@@ -278,7 +288,7 @@
                 <div class="quote-form-container">
                     <form id="quote-form" class="quote-form">
                         <!-- Web3Forms Access Key -->
-                        <input type="hidden" name="access_key" value="568d54d0-c0af-46ae-a5d6-6546fd08d7b2">
+                        <input type="hidden" name="access_key" value="%VITE_WEB3FORMS_ACCESS_KEY%">
                         <input type="hidden" name="subject" value="New Request a Quote Submission">
                         
                         <div class="form-group">
